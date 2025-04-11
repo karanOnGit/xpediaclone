@@ -1,0 +1,25 @@
+.container {
+    /* border: 1px solid red; */
+    height: 144px;
+    width: 1440px;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.innerContainer {
+    position: fixed;
+    top: 37px;
+    height: 106px;
+    /* border: 1px solid green; */
+    width: 1460px;
+    background-color: #FFFFFF;
+    position: fixed;
+    /* padding: 29px 75px 29px 75px; */
+    gap: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
