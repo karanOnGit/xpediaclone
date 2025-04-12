@@ -1,5 +1,5 @@
 import React from "react";
-import rectImg from '../../assets/rectangle.png'
+import rectImg from '../../assets/rectangle.png';
 
 const Footer = () => {
     const sectionStyle = {
@@ -10,11 +10,13 @@ const Footer = () => {
         borderTopRightRadius: '40px',
         fontFamily: 'sans-serif',
         position: 'relative',
+        width: '1400px', // fixed width for non-responsiveness
+        // margin: '0 auto',
     };
 
     const gridStyle = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gridTemplateColumns: '25% 25% 25% 25%',
         gap: '30px',
         borderBottom: '1px solid #888',
         paddingBottom: '30px'
@@ -47,31 +49,37 @@ const Footer = () => {
 
     const contactRowStyle = {
         display: 'flex',
-        flexWrap: 'wrap',
         justifyContent: 'space-between',
         width: '100%',
-        marginBottom: '10px'
+        marginBottom: '10px',
+        flexWrap: 'nowrap',
+        gap: '20px'
     };
 
     const contactItemStyle = {
         display: 'flex',
         alignItems: 'center',
         gap: '10px',
-        margin: '5px 0'
+        whiteSpace: 'nowrap'
     };
 
     return (
         <footer style={sectionStyle}>
-            <img src={rectImg} alt="no" srcset=""
+            <img
+                src={rectImg}
+                alt="no"
                 style={{
                     display: 'flex',
                     position: 'absolute',
-                    left: '-20px',
+                    left: '-2px',
                     zIndex: '-1',
                     top: '-25px',
-                    scale: '0.98',
+                    scale: '1',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                 }}
             />
+
             <div style={gridStyle}>
                 <div>
                     <h3 style={headingStyle}>Top Partners</h3>
@@ -115,17 +123,16 @@ const Footer = () => {
                 </div>
             </div>
 
-
             <div style={bottomRowStyle}>
                 <div style={contactRowStyle}>
                     <div style={contactItemStyle}>
-                        <strong>Business Enquiries :</strong>
+                        <strong>Business Enquiries:</strong>
                         <span>📧 <a href="mailto:sales@socioglamm.com">sales@socioglamm.com</a></span>
                         <span>📞 +62 - 87787406282</span>
                     </div>
 
                     <div style={contactItemStyle}>
-                        <strong>Complaints :</strong>
+                        <strong>Complaints:</strong>
                         <span>📧 <a href="mailto:info@socioglamm.com">info@socioglamm.com</a></span>
                         <span>📞 +62 - 87787406282</span>
                     </div>

@@ -85,11 +85,13 @@ export const Card = ({ posts }) => {
                             cursor: 'pointer',
                         }}>Follow</button>
                     </div>
-                    <img
-                        src={post}
-                        alt={`Post ${index + 1}`}
-                        style={{ width: '588.78px', height: '322px', margin: '0 auto', display: 'block', borderRadius: '18px' }}
-                    />
+                    <a href={post} target='_blank'>
+                        <img
+                            src={post}
+                            alt={`Post ${index + 1}`}
+                            style={{ width: '588.78px', height: '322px', margin: '0 auto', display: 'block', borderRadius: '18px' }}
+                        />
+                    </a>
                     <svg width="517" height="1" viewBox="0 0 517 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.252655" y1="0.5" x2="516.82" y2="0.5" stroke="black" stroke-opacity="0.1" />
                     </svg>
@@ -108,7 +110,7 @@ export const Card = ({ posts }) => {
 
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-                        <img src={commentImg} alt="nf" />
+                            <img src={commentImg} alt="nf" />
 
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
@@ -116,7 +118,7 @@ export const Card = ({ posts }) => {
 
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-                        <img src={shareimg} alt="nf" />
+                            <img src={shareimg} alt="nf" />
                         </div>
                     </div>
                 </div>

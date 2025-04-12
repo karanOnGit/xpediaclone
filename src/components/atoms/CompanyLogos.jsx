@@ -10,12 +10,12 @@ export const CompanyLogos = ({ compLogo }) => {
                 borderRadius: '100px',
                 justifyContent: 'center',
                 backgroundColor: '#f7f7f7',
-                position: 'absolute',
+                position: 'fixed',
                 top: '144px', // Replaces marginTop
                 // right: '53px',
                 zIndex: 10,
                 width: '998px',
-                padding: '10px 0', // Optional for spacing inside the container
+                // padding: '10px 0', // Optional for spacing inside the container
             }}
         >
             {compLogo.map((logoLink, index) => (
@@ -36,18 +36,20 @@ export const CompanyLogos = ({ compLogo }) => {
                         transition: 'border 0.2s ease-in-out',
                     }}
                 >
-                    <img
-                        src={logoLink}
-                        alt={`Company Logo ${index}`}
-                        style={{
-                            maxWidth: '80%',
-                            maxHeight: '80%',
-                            objectFit: 'contain',
-                            cursor: 'pointer',
-                        }}
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                    />
+                    <a href={logoLink} target='_blank'>
+                        <img
+                            src={logoLink}
+                            alt={`Company Logo ${index}`}
+                            style={{
+                                maxWidth: '80%',
+                                maxHeight: '80%',
+                                objectFit: 'contain',
+                                cursor: 'pointer',
+                            }}
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        />
+                    </a>
                 </div>
             ))}
         </div>

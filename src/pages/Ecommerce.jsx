@@ -5,6 +5,7 @@ const Ecommerce = () => {
         <div
             style={{
                 display: 'flex',
+                top: '390px'
             }}
         >Ecommerce Page
         </div>
