@@ -1,6 +1,10 @@
 #root {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
+}
+
+.floating-btn:hover {
+  transform: rotate(90deg) scale(1.1);
 }

@@ -1,0 +1,13 @@
+.container {
+    /* border: 1px solid black; */
+    color: #000;
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
+/* .containerII {
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+} */

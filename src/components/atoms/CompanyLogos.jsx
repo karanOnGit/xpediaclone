@@ -1,55 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const CompanyLogos = ({compLogo}) => {
+export const CompanyLogos = ({ compLogo }) => {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
     return (
         <div
             style={{
                 display: 'flex',
-                // gap: '16px',
-                // padding: '14px 11px 14px 11px',
-                backgroundColor: '#f7f7f7',
                 borderRadius: '100px',
                 justifyContent: 'center',
+                backgroundColor: '#f7f7f7',
+                position: 'fixed',
+                right: '53px',
+                zIndex: '10',
+                marginTop: '144px'
             }}
         >
             {compLogo.map((logoLink, index) => (
                 <div
                     key={index}
                     style={{
-                        width: '94px',
-                        height: '94px',
+                        width: '76px',
+                        height: '76px',
+                        borderRadius: '50%',
+                        backgroundColor: '#FFFFFF',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        padding: '12px',
-                        backgroundColor: 'transparent',
+                        overflow: 'hidden',
+                        boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
+                        margin: '9px 12px',
+                        border: hoveredIndex === index ? '1px solid #000' : 'none',
+                        transition: 'border 0.2s ease-in-out',
                     }}
                 >
-                    <div
+                    <img
+                        src={logoLink}
+                        alt={`Company Logo ${index}`}
                         style={{
-                            width: '75.97px',
-                            height: '75.97px',
-                            borderRadius: '50%',
-                            backgroundColor: '#FFFFFF',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            overflow: 'hidden',
-                            boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
+                            maxWidth: '80%',
+                            maxHeight: '80%',
+                            objectFit: 'contain',
+                            cursor: 'pointer',
                         }}
-                    >
-                        <img
-                            src={logoLink}
-                            alt={`Company Logo ${index}`}
-                            style={{
-                                maxWidth: '80%',
-                                maxHeight: '80%',
-                                objectFit: 'contain',
-                            }}
-                        />
-                    </div>
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                    />
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};

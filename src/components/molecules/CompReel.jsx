@@ -1,5 +1,5 @@
 import React from 'react'
-import { CompanyLogos } from './CompanyLogos'
+import { CompanyLogos } from '../atoms/CompanyLogos'
 
 export const CompReel = () => {
     const compLogo = [
@@ -16,16 +16,6 @@ export const CompReel = () => {
     ]
 
     return (
-        <div
-            style={{
-                position: 'absolute',
-                height: '122px',
-                width: '998px',
-                left: '389px',
-                borderRadius: '100.5px',
-            }}
-        >
-            <CompanyLogos compLogo={compLogo} />
-        </div>
+        <CompanyLogos compLogo={compLogo} />
     )
 }

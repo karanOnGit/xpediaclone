@@ -1,0 +1,12 @@
+.container {
+    width: 659px;
+    height: 1830px;
+    /* top: 298px;
+    left: 390px; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    gap: 15px;
+    margin: 120px 0;
+}
+

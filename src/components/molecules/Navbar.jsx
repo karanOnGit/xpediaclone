@@ -5,16 +5,11 @@ import { NavRight } from '../atoms/NavRight';
 
 const Navbar = () => {
     return (
-
         <div
-            className={styles.container}
+            className={styles.innerContainer}
         >
-            <div
-                className={styles.innerContainer}
-            >
-                <NavLeft />
-                <NavRight />
-            </div>
+            <NavLeft />
+            <NavRight />
         </div>
     )
 }
