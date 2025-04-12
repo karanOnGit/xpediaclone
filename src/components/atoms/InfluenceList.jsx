@@ -15,6 +15,8 @@ export const InfluenceList = ({ influcerList }) => {
                             gap: '25px',
                             marginBottom: '10px',
                             width: '100%',
+                            height: '49px',
+                            // backgroundColor: 'red',
                         }}
                     >
                         <img
@@ -23,16 +25,29 @@ export const InfluenceList = ({ influcerList }) => {
                             style={{ width: '33px', height: '33px', borderRadius: '50%' }}
                         />
                         <div>
-                            <p>{influence.name}</p>
+                            <p
+                                style={{
+                                    // border: '1px solid black',
+                                    margin: 0,
+                                    padding: '2px 0'
+                                }}
+                            >
+                                {influence.name}
+                            </p>
                             <p
                                 style={{
                                     color: '#ddd',
                                     fontSize: '15px',
                                     lineHeight: '100%',
+                                    // border: '1px solid black',
+                                    margin: 0,
+                                    padding: '2px 0'
                                 }}
-                            >#sharpElectronic/Socioglamm</p>
+                            >
+                                #sharpElectronic/Socioglamm
+                            </p>
                         </div>
-                        {/* <p style={{ margin: 0 }}>{influence.name}</p> */}
+
                         <div>
                             <FaChevronRight />
                         </div>

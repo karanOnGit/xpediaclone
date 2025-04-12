@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export const CompanyLogos = ({ compLogo }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -10,10 +10,12 @@ export const CompanyLogos = ({ compLogo }) => {
                 borderRadius: '100px',
                 justifyContent: 'center',
                 backgroundColor: '#f7f7f7',
-                position: 'fixed',
-                right: '53px',
-                zIndex: '10',
-                marginTop: '144px'
+                position: 'absolute',
+                top: '144px', // Replaces marginTop
+                // right: '53px',
+                zIndex: 10,
+                width: '998px',
+                padding: '10px 0', // Optional for spacing inside the container
             }}
         >
             {compLogo.map((logoLink, index) => (

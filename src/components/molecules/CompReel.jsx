@@ -16,6 +16,12 @@ export const CompReel = () => {
     ]
 
     return (
+        <div
+            style={{
+                marginLeft: '389px',
+            }}
+        >
         <CompanyLogos compLogo={compLogo} />
+        </div>
     )
 }

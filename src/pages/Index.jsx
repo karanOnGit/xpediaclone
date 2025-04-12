@@ -6,6 +6,7 @@ import Ecommerce from './Ecommerce';
 import { Route, Routes } from 'react-router-dom';
 import { CommunityModal } from '../components/atoms/CompModal';
 import FloatingAddButton from '../components/atoms/FloatingAddButton';
+import Footer from '../components/molecules/Footer';
 
 const Index = () => {
     const [showModal, setShowModal] = useState(false);
@@ -28,6 +29,7 @@ const Index = () => {
             </Routes>
             <FloatingAddButton onClick={handleAddClick} />
             {showModal && <CommunityModal onClose={handleCloseModal} />}
+            <Footer />
         </>
     );
 };
